@@ -9,10 +9,11 @@
  * @returns {number}
  */
 function countProperties(obj) {
+  let count = 0;
   for (const key in obj) {
-    const result = obj[key];
+    count++;
   }
-  return result;
+  return count;
 }
 
 export { countProperties };

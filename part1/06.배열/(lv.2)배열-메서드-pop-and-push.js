@@ -14,13 +14,23 @@
  * @returns {string[]} 조작 후의 할 일 배열
  */
 
-function manageTaskList(tasks, newTask) {
-  const task = [];
-  const popArr = task.pop();
-  const pushArr = task.push(newTask);
-  const newArr = (pushArr[0].innerHTML = "Updated Task");
+// *변수에 할당하는 것이 아닌 메서드를 사용하여 배열 자체에 값을 변경하기*
 
-  return newArr;
+function manageTaskList(tasks, newTask) {
+  //   const task = [];  // 새로운 빈 배열 생성 X => task를 그대로 사용해야 함
+  //   const popArr = task.pop(); // 빈 배열에서 pop() 호출 => 아무런 효과 X
+  //   const pushArr = task.push(newTask); // push()는 추가된 후 배열 길이를 반환함
+  //   const newArr = (pushArr[0].innerHTML = "Updated Task"); // pushArr은 배열 X, innerHTML은 일반 배열에 적용 X
+
+  //   return newArr; // 변형된 배열이 아닌 잘못된 값을 반환함
+
+  tasks.pop();
+  tasks.push(newTask);
+
+  if (tasks.length > 0) {
+    tasks[0] = "Updated Task";
+  }
+  return tasks;
 }
 
 // export를 수정하지 마세요.

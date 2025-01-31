@@ -20,19 +20,28 @@
  */
 
 // TODO: findUserByName 함수를 작성하세요.
-function findUserByName(users) {
-  const findName = users.find((user) => {
-    return user === user.name || null;
-  });
-  return findName;
+// function findUserByName(users, name) {
+//   const findName = users.find((user) => {
+//     return user === user.name || null;
+//   });
+//   return findName;
+// }
+function findUserByName(users, name) {
+  const findName = users.find((user) => user.name === name);
+  return findName ?? null; // 일치하는 객체가 없으면 null 반환
 }
 
 // TODO: findIndexOf 함수를 작성하세요.
-function findIndexOf(arr) {
-  const findIndex = arr.findIndex((content) => {
-    return content === content.value || -1;
-  });
-  return findIndex;
+// function findIndexOf(arr) {
+//   const findIndex = arr.findIndex((content) => {
+//     return content === content.value  // *content에 value라는 속성이 있을 때만 적용 가능
+//   });
+//   return findIndex;
+// }
+
+// findIndex는 일치하는 값이 없으면 -1을 반환
+function findIndexOf(arr, value) {
+  return arr.findIndex((content) => content === value);
 }
 
 // export를 수정하지 마세요.

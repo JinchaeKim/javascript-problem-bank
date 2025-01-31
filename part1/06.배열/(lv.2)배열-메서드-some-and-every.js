@@ -10,10 +10,22 @@
  */
 
 // TODO: hasNegative 함수를 작성하세요.
-function hasNegative() {}
+// function hasNegative() {   //arr를 함수의 매개변수로 추가해야 함
+//   // const negative = (el) => el < 0;
+//   // return arr.some(negative);  // 배열을 지정해야 함. 현재는 arr가 정의되지 않음
+// }
+function hasNegative(arr) {
+  return arr.some((el) => el < 0);
+}
 
-// TODO: allPositive 함수를 작성하세요.
-function allPositive() {}
+// // TODO: allPositive 함수를 작성하세요.
+// function allPositive() {
+//   const positive = (element) => element > 0;
+//   return arr.every(positive);
+// }
+function allPositive(arr) {
+  return arr.every((el) => el > 0);
+}
 
 // export를 수정하지 마세요.
 export { hasNegative, allPositive };

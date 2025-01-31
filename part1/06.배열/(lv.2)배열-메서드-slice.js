@@ -12,14 +12,22 @@
  * @param {number} [end]
  * @returns {any[]} 잘려진 새 배열
  */
+
+// *slice() 메서드는 새 배열을 반환*
+
 function subArray(arr, start, end) {
   // TODO
-  const arr = [];
-  for(let i = start; i<=end; i++) {
-    arr.push[i];
-  };
-  
-  const sliceArr = arr.slice(0);
+  //   if (!arr.includes("end")) {   // end는 '숫자형 매개변수', includes는 문자열이 있는지를 확인
+  //     arr.slice(start);  // return ~ 으로 반환값을 저장하기
+  //   } else {
+  //     arr.slice(start, end);  // return ~ 으로 반환값을 저장하기
+  //   }
+  //   return subArray;  // 함수 자체를 반환하고 있음
+
+  if (typeof end === "undefined") {
+    return arr.slice(start);
+  }
+  return arr.slice(start, end);
 }
 
 // export를 수정하지 마세요.
