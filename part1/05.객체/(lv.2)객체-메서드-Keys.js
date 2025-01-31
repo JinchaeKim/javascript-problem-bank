@@ -9,7 +9,8 @@
  * @returns {string[]}
  */
 function getObjectKeys(obj) {
-  // TODO
+  const results = Object.keys(obj);
+  return results;
 }
 
 // export를 수정하지 마세요.

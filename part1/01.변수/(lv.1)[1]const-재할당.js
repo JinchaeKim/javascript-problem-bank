@@ -7,7 +7,8 @@
  */
 
 function reassignConst() {
-  // TODO
+  const abc = 123;
+  abc = 456;
 }
 
 // export 를 수정하지 마세요.

@@ -11,7 +11,11 @@
  */
 function sumArray(arr) {
   // TODO
+  let num = 0;
+  const sum = arr.forEach((a) => {
+    num += a;
+  });
+  return num;
 }
-
 // export를 수정하지 마세요.
 export { sumArray };

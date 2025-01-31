@@ -14,6 +14,12 @@
  */
 function subArray(arr, start, end) {
   // TODO
+  const arr = [];
+  for(let i = start; i<=end; i++) {
+    arr.push[i];
+  };
+  
+  const sliceArr = arr.slice(0);
 }
 
 // export를 수정하지 마세요.

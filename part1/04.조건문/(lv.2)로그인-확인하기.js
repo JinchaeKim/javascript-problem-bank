@@ -12,6 +12,8 @@
 
 function loginCheck(id, pw) {
   // TODO
+  const login = id === "admin" && pw === "1234" ? "success" : "fail";
+  return login;
 }
 
 // export를 수정하지 마세요.

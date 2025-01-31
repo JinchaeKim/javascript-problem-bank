@@ -11,7 +11,8 @@
  */
 
 function checkAdult(age) {
-  // TODO
+  const result = age >= 20 ? "adult" : "minor";
+  return result;
 }
 
 // export 를 수정하지 마세요.
