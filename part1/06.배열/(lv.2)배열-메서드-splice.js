@@ -16,8 +16,8 @@
  */
 function removeAndInsert(arr, start, deleteCount, ...items) {
   // TODO
-  let result = arr.splice(start, deleteCount, "item");
-  return result;
+  arr.splice(start, deleteCount, ...items); // 원본 배열 직접 조작
+  return arr; // 원본 배열 반환
 }
 
 // export를 수정하지 마세요.

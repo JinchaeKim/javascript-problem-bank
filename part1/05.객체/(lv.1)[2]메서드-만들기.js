@@ -12,8 +12,9 @@ const age = 25;
 
 const person = {
   // TODO: introduce 메서드를 작성하세요.
-  introduce(name, age) {
-    return "안녕하세요, 저는 " + name + "이고 " + age + "살입니다.";
+  introduce() {
+    // 객체 내에 name과 age 속성이 이미 존재, 매개변수로 받아오지 않아도 됌
+    return `안녕하세요, 저는 ${name}이고 ${age}살입니다.`;
   },
 };
 // person.introduce();
