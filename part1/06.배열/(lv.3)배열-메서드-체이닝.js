@@ -16,12 +16,10 @@
 // 배열 체이닝: 함수 호출 시 객체를 반환하면, 그 객체의 메서들을 줄줄이 이어서 사용하는 것.
 function get20sEmail(arr) {
   // TODO: 배열 메서드 체이닝을 사용해 20대 사람의 email 배열을 반환하세요.
-  arr
-    .filter((age) => 19 < age < 30)
-    .sort((a, b) => a - b)
+  return arr
+    .filter((person) => person.age >= 20 && person.age < 30)
+    .sort((a, b) => a.age - b.age)
     .map((person) => person.email);
-
-  return arr;
 }
 
 // export를 수정하지 마세요.
