@@ -17,16 +17,16 @@
  *
  * @returns {number}
  */
-function skipAndStop(number) {
+function skipAndStop() {
   let sum = 0;
-  for (i = 0; i <= number; i++) {
-    if (i === (n % 2 === 0)) {
+  for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
       continue;
     }
-    if (i === 7) {
+    sum += i;
+    if (i == 7) {
       break;
     }
-    sum += i;
   }
   return sum;
 }
