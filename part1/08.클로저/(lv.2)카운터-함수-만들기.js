@@ -13,14 +13,17 @@
 function createCounter() {
   let count = 0;
 
-  function increase() {
-    return count + 1;
-  }
-  return increase;
-  function decrease() {
-    return count - 1;
-  }
-  return decrease;
+  return {
+    increase: function () {
+      return count++;
+    },
+    decrease: function () {
+      return count--;
+    },
+    currentValue: function () {
+      return count;
+    },
+  };
 }
 
 // export를 수정하지 마세요.
