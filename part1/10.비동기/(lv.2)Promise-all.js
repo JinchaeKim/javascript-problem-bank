@@ -11,6 +11,15 @@
  */
 
 // TODO: parallelRequests 함수를 작성하세요.
+const parallelRequests = async (promise1, promise2) => {
+  try {
+    return await Promise.all([promise1, promise2]);
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
 
+parallelRequests();
 // export를 수정하지 마세요.
 export { parallelRequests };
